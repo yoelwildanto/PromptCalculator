@@ -5,60 +5,22 @@
     var menu = prompt("Pilih Menu:\n 1. Penjumlahan \n 2. Pengurangan \n 3. Pembagian \n 4. Perkalian \n 5. Pangkat 2 \n 6. Akar pangkat 2 \n 7. Akar pangkat 3 \n 8. Luas Lingkaran")
     menu =Number(menu)
 
-    switch (menu) {
-                case 1:
-                    var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
-                    var num2 = parseFloat(prompt("Masukkan angka Kedua:"));
-                    result = num1 + num2;
-                    hasil = alert(`hasil: ${result}`)
-                    break;
-                case 2:
-                    var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
-                    var num2 = parseFloat(prompt("Masukkkan angka Kedua:"));
-                    result = num1 - num2;
-                    hasil = alert(`hasil: ${result}`)
-                    break;
-                case 3:
-                    var num1 = parseFloat(prompt("Masukkkan angka:"));
-                    var num2 = parseFloat(prompt("Masukkkan angka Pembagi:"));
-                    if (num2 !== 0) {
-                        result = num1 / num2;
-                        hasil = alert(`hasil: ${result}`)
-                    } else {
-                        result = "tidak bisa dibagi angka nol";
-                        hasil = alert(result)
-                    }
-                    break;
-                case 4:
-                    var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
-                    var num2 = parseFloat(prompt("Masukkkan angka Kedua:"));
-                    result = num1 * num2;
-                    hasil = alert(`hasil: ${result}`)
-                    break;
-                case 5:
-                    var num = parseFloat(prompt("Masukkkan angka:"));
-                    result = num * num;
-                    hasil = alert(`hasil: ${result}`)
-                    break;
-                case 6:
-                    var num = parseFloat(prompt("Masukkan angka"));
-                    result = Math.sqrt(num)
-                    hasil = alert (`hasil: ${result}`)
-                    break;
-                case 7:
-                    var num = parseFloat(prompt("Masukkan angka"));
-                    result = Math.cbrt(num)
-                    hasil = alert(`hasil: ${result}`)
-                    break;
-                case 8:
-                    var num = parseFloat(prompt("Masukkan Jari-jari Linkgaran"));
-                    result = 2*3.14*num          
-                    hasil = alert(`Luas Lingkaran adalah ${result}`)          
-                default:
-                    result = "Input tidak Valid";
-                    hasil = alert(result)
-            }
+        function numSquare(){
+            const num = parseFloat(prompt("Masukkan angka"));
+            const hasil = num * num;
+            alert(`Hasil dari ${num} pangkat dua adalah ${hasil}`); 
         }
 
+        function rootSquare(){
+            const num =  parseFloat(prompt("Masukkan angka"));
+            const hasil = Math.sqrt(num);
+            alert(`Hasil dari ${num} akar pangkat dua adalah ${hasil}`)
+        }
 
+        function rootThree(){
+            const num =  parseFloat(prompt("Masukkan angka"));
+            const hasil = Math.cbrt(num);
+            alert(`Hasil dari ${num} akar pangkat dua adalah ${hasil}`)
+        }
+    }
 </script>
