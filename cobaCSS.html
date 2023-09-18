@@ -42,20 +42,20 @@
         var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
         var num2 = parseFloat(prompt("Masukkan angka Kedua:"));
         result = num1 + num2;
-        return alert(`Hasil: ${result}`)   
+        return alert(`Hasil ${num1}+${num2}= ${result}`)   
      }
     function substraction (a,b){
         var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
         var num2 = parseFloat(prompt("Masukkkan angka Kedua:"));
         result = num1 - num2;
-        return alert(`hasil: ${result}`)   
+        return alert(`Hasil ${num1}-${num2}= ${result}`)   
      }
 
     function multiplication (a,b){
         var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
         var num2 = parseFloat(prompt("Masukkkan angka Kedua:"));
         result = num1 * num2;
-        return alert(`hasil: ${result}`)
+        return alert(`Hasil ${num1}x${num2}= ${result}`)
      }
 
     function division (a,b){
@@ -63,7 +63,7 @@
         var num2 = parseFloat(prompt("Masukkkan angka Pembagi:"));
         if (num2 !== 0) {
         result = num1 / num2;
-        hasil = alert(`hasil: ${result}`)
+        hasil = alert(`Hasil ${num1}:${num2}= ${result}`)
         } else {
         result = "tidak bisa dibagi angka nol";
         return alert(`Hasil: ${result}`)
@@ -84,13 +84,13 @@
         function rootThree(){
             const num =  parseFloat(prompt("Masukkan angka"));
             const hasil = Math.cbrt(num);
-            alert(`Hasil dari ${num} akar pangkat dua adalah ${hasil}`)
+            alert(`Hasil dari ${num} akar pangkat tiga adalah ${hasil}`)
         }
 
         function luasLingkaran(){
             const num = parseFloat(prompt("Masukkan angka"));
             const hasil = num*2*22/7
-            return alert(`Hasil: ${hasil}`)
+            return alert(`Luas Lingaran dengan jari-jari ${num} adalah ${hasil}`)
         }
 
         function confirmation(){
