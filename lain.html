@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Operations</title>
+</head>
+<body>
+    <h1>Math Operations Menu</h1>
+    <p>Choose an operation:</p>
+    <p>1. Addition</p>
+    <p>2. Subtraction</p>
+    <p>3. Division</p>
+    <p>4. Multiplication</p>
+    <p>5. Square</p>
+
+    <input type="number" id="operationChoice" placeholder="Enter your choice (1-5)">
+    <button onclick="promptForNumbers()">Calculate</button>
+
+    <div id="result"></div>
+    <button id="backToMenu" style="display: none;" onclick="showMenu()">Back to Menu</button>
+
+    <script>
+        function promptForNumbers() {
+            var choice = document.getElementById('operationChoice').value;
+            var num1, num2;
+
+            switch (choice) {
+                case '1':
+                    num1 = parseFloat(prompt("Enter the first number for addition:"));
+                    num2 = parseFloat(prompt("Enter the second number for addition:"));
+                    calculateResult(num1 + num2);
+                    break;
+                case '2':
+                    num1 = parseFloat(prompt("Enter the first number for subtraction:"));
+                    num2 = parseFloat(prompt("Enter the second number for subtraction:"));
+                    calculateResult(num1 - num2);
+                    break;
+                case '3':
+                    num1 = parseFloat(prompt("Enter the numerator for division:"));
+                    num2 = parseFloat(prompt("Enter the denominator for division:"));
+                    if (num2 !== 0) {
+                        calculateResult(num1 / num2);
+                    } else {
+                        calculateResult("Cannot divide by zero");
+                    }
+                    break;
+                case '4':
+                    num1 = parseFloat(prompt("Enter the first number for multiplication:"));
+                    num2 = parseFloat(prompt("Enter the second number for multiplication:"));
+                    calculateResult(num1 * num2);
+                    break;
+                case '5':
+                    num1 = parseFloat(prompt("Enter a number for squaring:"));
+                    calculateResult(num1 * num1);
+                    break;
+                default:
+                    calculateResult("Invalid choice");
+            }
+        }
+
+        function calculateResult(result) {
+            document.getElementById('result').innerHTML = "Result: " + result;
+            document.getElementById('backToMenu').style.display = 'inline'; // Show the "Back to Menu" button
+        }
+
+        function showMenu() {
+            document.getElementById('result').innerHTML = '';
+            document.getElementById('backToMenu').style.display = 'none'; // Hide the "Back to Menu" button
+            document.getElementById('operationChoice').value = ''; // Clear the choice input
+        }
+    </script>
+</body>
+</html>

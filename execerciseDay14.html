@@ -2,7 +2,7 @@
 
 <script>
     function calculator(){
-    var menu = prompt("Pilih Menu:\n 1. Penjumlahan \n 2. Pengurangan \n 3. Pembagian \n 4. Perkalian \n 5. Pangkat 2 \n 6. Akar pangkat 2 \n 7. Akar pangkat 3 \n 8. Luas Lingkaran")
+    var menu = prompt(`Pilih Menu:\n 1. Penjumlahan \n 2. Pengurangan \n 3. Pembagian \n 4. Perkalian \n 5. Pangkat 2 \n 6. Akar pangkat 2 \n 7. Akar pangkat 3 \n 8. Luas Lingkaran`)
     menu =Number(menu)
 
     switch (menu) {
@@ -10,7 +10,9 @@
                     var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
                     var num2 = parseFloat(prompt("Masukkan angka Kedua:"));
                     result = num1 + num2;
-                    hasil = alert(`hasil: ${result}`)
+                    hasil = alert(`Hasil: ${result}`)
+                    // var menu = prompt(`Pilih Menu:\n 1. Penjumlahan \n 2. Pengurangan \n 3. Pembagian \n 4. Perkalian \n 5. Pangkat 2 \n 6. Akar pangkat 2 \n 7. Akar pangkat 3 \n 8. Luas Lingkaran`)
+                    // result = num1+num2
                     break;
                 case 2:
                     var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
@@ -59,6 +61,17 @@
                     hasil = alert(result)
             }
         }
+
+        // function calculateResult(result) {
+        //     document.getElementById('result').innerHTML = "Result: " + result;
+        //     document.getElementById('backToMenu').style.display = 'inline'; // Show the "Back to Menu" button
+        // }
+
+        // function showMenu() {
+        //     document.getElementById('result').innerHTML = '';
+        //     document.getElementById('backToMenu').style.display = 'none'; // Hide the "Back to Menu" button
+        //     document.getElementById('operationChoice').value = ''; // Clear the choice input
+        // }
 
 
 </script>
