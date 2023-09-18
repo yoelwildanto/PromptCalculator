@@ -1,0 +1,54 @@
+<input type="button" value="calculator" onclick="calculator()">
+
+<script>
+    function addition(a,b){
+        var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
+        var num2 = parseFloat(prompt("Masukkan angka Kedua:"));
+        result = num1 + num2;
+        return alert(`Hasil: ${result}`)   
+     }
+    function substraction (a,b){
+        var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
+        var num2 = parseFloat(prompt("Masukkkan angka Kedua:"));
+        result = num1 - num2;
+        return alert(`hasil: ${result}`)   
+     }
+
+    function multiplication (a,b){
+        var num1 = parseFloat(prompt("Masukkkan angka Pertama:"));
+        var num2 = parseFloat(prompt("Masukkkan angka Kedua:"));
+        result = num1 * num2;
+        return alert(`hasil: ${result}`)
+     }
+
+    function division (a,b){
+        var num1 = parseFloat(prompt("Masukkkan angka:"));
+        var num2 = parseFloat(prompt("Masukkkan angka Pembagi:"));
+        if (num2 !== 0) {
+        result = num1 / num2;
+        hasil = alert(`hasil: ${result}`)
+        } else {
+        result = "tidak bisa dibagi angka nol";
+        return alert(`Hasil: ${result}`)
+        }  
+    }
+
+    function calculator(){
+        var menu = prompt(`Pilih Menu:\n 1. Penjumlahan \n 2. Pengurangan \n 3. Pembagian \n 4. Perkalian \n 5. Pangkat 2 \n 6. Akar pangkat 2 \n 7. Akar pangkat 3 \n 8. Luas Lingkaran`)
+    menu =Number(menu)
+
+    if (menu == 1){
+        addition()
+        calculator()
+    } else if (menu == 2){
+        substraction()
+        calculator()
+    } else if (menu == 3){
+        division();
+        calculator();
+    } else if (menu == 4){
+        multiplication();
+        calculator();
+    }
+    }
+</script>
