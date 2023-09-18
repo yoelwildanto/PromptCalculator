@@ -88,6 +88,14 @@
             return alert(`Hasil: ${hasil}`)
         }
 
+        function confirmation(){
+            if (confirm ("Menu") == true){
+                calculator();
+            }else {
+                alert("Terima Kasih")
+            }
+        }
+
 
 
     function calculator(){
@@ -97,31 +105,32 @@
     if (menu == 1){
         addition()
 
-        calculator()
+        confirmation()
     } else if (menu == 2){
         substraction()
-        calculator()
+        confirmation()
     } else if (menu == 3){
         division();
-        calculator();
+        confirmation();
     } else if (menu == 4){
         multiplication();
-        calculator();
+        confirmation();
     }
     else if (menu == 5){
         numSquare();
-        calculator()
+        confirmation()
     } else if (menu == 6){
         rootSquare();
-        calculator();
+        confirmation();
     }else if (menu == 7){
         rootThree();
-        calculator()
+        confirmation()
     } else if(menu == 8){
         luasLingkaran();
-        calculator()
+        confirmation()
     } else{
-        alert(`Input invalid`)
+        alert("Invalid Input")
+        confirmation()
     }
     }
 </script>
